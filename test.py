@@ -89,7 +89,8 @@ class Interpreter(object):
                     """expre -> INTEGER PLUS INTEGER"""
                     #set current token to the first token taken from the input
                     self.current_token = self.get_next_token()
-                    #left = self.current_token
+                    #we expect the current token to be a single-digit integer
+                    left = self.current_token
                     self.eat(INTEGER)
                     #we expect the current token to be a '+' token
                     op = self.current_token
